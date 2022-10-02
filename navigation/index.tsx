@@ -18,6 +18,7 @@ import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
 import ModalScreen from "../screens/ModalScreen";
 import NotFoundScreen from "../screens/NotFoundScreen";
+import TabAddPhoto from "../screens/TabAddPhoto";
 import TabFourScreen from "../screens/TabFourScreen copy";
 import TabOneScreen from "../screens/TabOneScreen";
 import TabThreeScreen from "../screens/TabThreeScreen";
@@ -115,6 +116,14 @@ function BottomTabNavigator() {
         options={{
           title: "Buscar",
           tabBarIcon: ({ color }) => <TabBarIcon name="search" color={color} />,
+        }}
+      />
+      <BottomTab.Screen
+        name="TabAddPhoto"
+        component={TabAddPhoto}
+        options={{
+          title: "Compartilhar",
+          tabBarIcon: ({ color }) => <TabBarIcon name="share" color={color} />,
         }}
       />
       <BottomTab.Screen
